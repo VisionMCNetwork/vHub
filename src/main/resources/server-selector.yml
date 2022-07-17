@@ -1,0 +1,93 @@
+server-selector:
+  item:
+    type: 'COMPASS'
+    name: '&e&lServer Selector &8(&7Right-Click&8)'
+    slot: 3
+  inventory:
+    title: '&e&lServer » Selector'
+    rows: 4
+    fillable-item:
+      type: 'STAINED_GLASS_PANE'
+      name: ' '
+      data: 15
+    items:
+      NA-Practice:
+        type: 'DIAMOND_SWORD'
+        name: '&d&lNA PRACTICE'
+        slot: 10
+        amount: 1
+        command: '/queue join NA-Practice'
+        lore:
+          - '%aqua_server_status_na-practice%'
+          - ''
+          - '&d&lInfo'
+          - ' &d&l┃ &fPlayers: &d%bungee_NA-Practice%/%server_max_players%'
+          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ''
+          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - ''
+          - '&e[Click to join]'
+      EU-Practice:
+        type: IRON_SWORD
+        name: '&d&lEU PRACTICE'
+        slot: 12
+        amount: 1
+        command: '/queue join EU-Practice'
+        lore:
+          - '&cServer Offline'
+          - ''
+          - '&d&lInfo'
+          - ' &d&l┃ &fPlayers: &d%bungee_EU-Practice%/%server_max_players%'
+          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ''
+          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - ''
+          - '&c[Cannot join queue]'
+      UHCMeetup:
+        type: GOLDEN_APPLE
+        name: '&d&lUHCMeetup'
+        slot: 22
+        amount: 1
+        command: '/queue join UHCMeetup'
+        lore:
+          - '&cServer Offline'
+          - ''
+          - '&d&lInfo'
+          - ' &d&l┃ &fPlayers: &d%bungee_Meetup%/30'
+          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ''
+          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - ''
+          - '&E&LCOMING SOON'
+      SoupPvP:
+        type: MUSHROOM_SOUP
+        name: '&d&lSoupPvP'
+        slot: 14
+        amount: 1
+        command: '/queue join SoupPvP'
+        lore:
+          - '&cServer Offline'
+          - ''
+          - '&d&lInfo'
+          - ' &d&l┃ &fPlayers: &d%bungee_SoupPvP%/200'
+          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ''
+          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - ''
+          - '&e&lCOMING SOON'
+      PotSG:
+        type: POTION
+        name: '&d&lPotSG'
+        slot: 16
+        amount: 1
+        command: '/queue join PotSG'
+        lore:
+          - '%aqua_server_status_potsg%'
+          - ''
+          - '&d&lInfo'
+          - ' &d&l┃ &fPlayers: &d%bungee_PotSG%/30'
+          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ''
+          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - ''
+          - '&e[Click to join]'

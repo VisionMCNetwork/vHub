@@ -1,0 +1,16 @@
+double-jump-enabled: true
+
+enderbutt:
+  enabled: true
+  item:
+    type: 'ENDER_PEARL'
+    name: '&e&lEnderbutt &8(&7Right-Click&8)'
+    slot: 5
+    amount: 1
+
+queue-message-delay: 30
+
+launchpad-enabled: true
+launchpad-type: STONE_PLATE
+
+void-level: -1
