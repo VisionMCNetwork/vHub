@@ -30,6 +30,8 @@ public class CustomConfig extends YamlConfiguration {
             plugin.saveResource(file.getName(), false);
         }
 
+        save(file);
+
         load(file);
     }
 }

@@ -19,10 +19,18 @@ public class Config {
         String fileName = name + ".yml";
         this.file = new File(plugin.getDataFolder(), fileName);
 
-        refreshConfig();
+        refresh();
     }
 
-    public void refreshConfig() {
+    public void save() {
+        try {
+            fileConfig.save(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void refresh() {
         if (!file.exists()) {
             try {
                 file.createNewFile();
@@ -30,6 +38,8 @@ public class Config {
                 e.printStackTrace();
             }
         }
+
+        save();
 
         this.fileConfig = YamlConfiguration.loadConfiguration(file);
     }
