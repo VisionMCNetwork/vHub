@@ -85,6 +85,19 @@
             <artifactId>acf-paper</artifactId>
             <version>0.5.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>dev.vnco.menu</groupId>
+            <artifactId>menu</artifactId>
+            <version>0.0.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.activated</groupId>
+            <artifactId>AquaCoreAPI</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/AquaCoreAPI.jar</systemPath>
+        </dependency>
     </dependencies>
 
 </project>
