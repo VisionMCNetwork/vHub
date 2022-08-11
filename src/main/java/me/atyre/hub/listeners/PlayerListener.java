@@ -25,7 +25,6 @@ import org.bukkit.inventory.ItemStack;
 
 @RequiredArgsConstructor
 public class PlayerListener implements Listener {
-
     private final Hub plugin;
 
     @EventHandler

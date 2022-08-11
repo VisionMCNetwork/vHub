@@ -1,17 +1,18 @@
 package me.atyre.hub.queue;
 
+import lombok.RequiredArgsConstructor;
 import me.atyre.hub.Hub;
 import me.atyre.hub.utils.MessageUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.util.List;
-
+@RequiredArgsConstructor
 public class QueueMessageTask extends BukkitRunnable {
+    private final Hub plugin;
+
     public void run() {
-        if (Hub.getInstance().getQueueManager().getEnabledQueues() != null) {
-            List<Queue> queues = Hub.getInstance().getQueueManager().getEnabledQueues();
-            for (Queue queue : queues) {
+        if (plugin.getQueueManager().getEnabledQueues() != null) {
+            for (Queue queue : plugin.getQueueManager().getEnabledQueues()) {
                 if (!queue.getQueuedPlayers().isEmpty())
                     for (Player player : queue.getQueuedPlayers()) {
                         for (String string : Hub.getInstance().getMessagesConfig().getStringList("queue-message")) {

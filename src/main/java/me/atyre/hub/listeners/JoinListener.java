@@ -14,7 +14,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 @RequiredArgsConstructor
 public class JoinListener implements Listener {
-
     private final Hub plugin;
 
     @EventHandler

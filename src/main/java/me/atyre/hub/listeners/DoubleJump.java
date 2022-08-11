@@ -12,7 +12,6 @@ import org.bukkit.event.player.PlayerToggleFlightEvent;
 
 @RequiredArgsConstructor
 public class DoubleJump implements Listener {
-
     private final Hub plugin;
 
     @EventHandler

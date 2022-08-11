@@ -22,7 +22,6 @@ public class ServerSelectorMenu extends Menu {
     @Override
     public Set<Button> getButtons(Player player) {
         Set<Button> buttons = new HashSet<>();
-
         return null;
     }
 }
