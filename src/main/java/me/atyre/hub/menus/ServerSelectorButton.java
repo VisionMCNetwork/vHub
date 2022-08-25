@@ -2,13 +2,11 @@ package me.atyre.hub.menus;
 
 import dev.vnco.menu.button.Button;
 import lombok.RequiredArgsConstructor;
-import me.atyre.hub.Hub;
 import me.atyre.hub.utils.ItemBuilder;
 import me.atyre.hub.utils.MessageUtil;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
@@ -38,6 +36,7 @@ public class ServerSelectorButton extends Button {
 
     @Override
     public void onClick(InventoryClickEvent event) {
-
+        player.performCommand(itemSection.getString(""));
+        player.closeInventory();
     }
 }

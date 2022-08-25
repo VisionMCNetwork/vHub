@@ -3,8 +3,11 @@ package me.atyre.hub.menus;
 import dev.vnco.menu.Menu;
 import dev.vnco.menu.button.Button;
 import dev.vnco.menu.type.FillType;
+import lombok.RequiredArgsConstructor;
 import me.atyre.hub.Hub;
+import me.atyre.hub.utils.CustomConfig;
 import me.atyre.hub.utils.ItemConstants;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 
 import java.util.HashSet;
@@ -22,6 +25,15 @@ public class ServerSelectorMenu extends Menu {
     @Override
     public Set<Button> getButtons(Player player) {
         Set<Button> buttons = new HashSet<>();
-        return null;
+
+        CustomConfig serverSelectorConfig = Hub.getInstance().getServerSelectorConfig();
+        ConfigurationSection itemSection = serverSelectorConfig.getConfigurationSection("server-selector.items");
+
+        for (String itemKey : itemSection.getKeys(false)) {
+            ConfigurationSection currentItemSection = itemSection.getConfigurationSection(itemKey);
+            buttons.add(new ServerSelectorButton(player, currentItemSection));
+        }
+
+        return buttons;
     }
 }
