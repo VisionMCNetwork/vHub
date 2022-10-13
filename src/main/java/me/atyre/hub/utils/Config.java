@@ -16,31 +16,33 @@ public class Config {
 
     public Config(JavaPlugin plugin, String name) {
         this.plugin = plugin;
-        String fileName = name + ".yml";
-        this.file = new File(plugin.getDataFolder(), fileName);
+
+        try {
+            String fileName = name + ".yml";
+            this.file = new File(plugin.getDataFolder(), fileName);
+
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         refresh();
     }
 
     public void save() {
         try {
-            fileConfig.save(file);
+            if (file != null && fileConfig != null) {
+                fileConfig.save(file);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void refresh() {
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
         save();
-
         this.fileConfig = YamlConfiguration.loadConfiguration(file);
     }
 }

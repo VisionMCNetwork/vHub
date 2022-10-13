@@ -15,8 +15,13 @@ public class CustomConfig extends YamlConfiguration {
 
     public CustomConfig(JavaPlugin plugin, String name) {
         this.plugin = plugin;
+
         String fileName = name + ".yml";
         this.file = new File(plugin.getDataFolder(), fileName);
+
+        if (!file.exists()) {
+            plugin.saveResource(fileName, false);
+        }
 
         try {
             refreshConfig();
@@ -26,12 +31,10 @@ public class CustomConfig extends YamlConfiguration {
     }
 
     public void refreshConfig() throws IOException, InvalidConfigurationException {
-        if (!file.exists()) {
-            plugin.saveResource(file.getName(), false);
-        }
-
-        save(file);
-
         load(file);
+
+        if (file != null) {
+            save(file);
+        }
     }
 }
