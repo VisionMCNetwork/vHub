@@ -4,7 +4,7 @@ enderbutt:
   enabled: true
   item:
     type: 'ENDER_PEARL'
-    name: '&e&lEnderbutt &8(&7Right-Click&8)'
+    name: '&eEnderbutt &7(Right Click)'
     slot: 5
     amount: 1
 

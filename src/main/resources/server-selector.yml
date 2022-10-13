@@ -1,93 +1,135 @@
 server-selector:
   item:
-    type: 'COMPASS'
-    name: '&e&lServer Selector &8(&7Right-Click&8)'
+    type: 'BOOK'
+    name: '&eServer Selector &7(Right Click)'
     slot: 3
   inventory:
-    title: '&e&lServer » Selector'
-    rows: 4
+    title: '&8Server Selector » Main'
+    rows: 3
     fillable-item:
       type: 'STAINED_GLASS_PANE'
       name: ' '
       data: 15
     items:
+      Practice:
+        type: DIAMOND_SWORD
+        name: '&6&lPractice'
+        slot: 10
+        amount: 1
+        lore:
+          - '&7Intense gamemodes with'
+          - '&7ranked and casual duels'
+          - ''
+          - '&eServers: &63'
+      SoupPvP:
+        type: MUSHROOM_SOUP
+        name: '&6&lSoupPvP'
+        slot: 13
+        amount: 1
+        command: '/queue join SoupPvP'
+        server-name: 'SoupPvP'
+        lore:
+          - '&cServer Offline'
+          - ''
+          - ' &e&l● &ePlayers: &6%bungee_SoupPvP%/200'
+          - ' &e&l● &eIn Queue: &6<queue_max_position>'
+          - ''
+          - '&4&lCOMING SOON'
+      Minigames:
+        type: BLAZE_POWDER
+        name: '&6&lMinigames'
+        slot: 16
+        amount: 1
+        lore:
+          - '&7Fast paced games which'
+          - '&7You can play with friends'
+          - '&7That is filled with PvP'
+          - ''
+          - '&eServers: &62'
+  practice-inventory:
+    title: '&8Server Selector » Practice'
+    rows: 3
+    items:
       NA-Practice:
         type: 'DIAMOND_SWORD'
-        name: '&d&lNA PRACTICE'
+        name: '&6&lNA PRACTICE'
         slot: 10
         amount: 1
         command: '/queue join NA-Practice'
+        server-name: 'NA-Practice'
         lore:
           - '%aqua_server_status_na-practice%'
           - ''
-          - '&d&lInfo'
-          - ' &d&l┃ &fPlayers: &d%bungee_NA-Practice%/%server_max_players%'
-          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ' &e&l● &ePlayers: &6%bungee_NA-Practice%/%server_max_players%'
+          - ' &e&l● &eIn Queue: &6<queue_max_position>'
           - ''
-          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
-          - ''
-          - '&e[Click to join]'
+          - '&a&lCLICK TO JOIN'
       EU-Practice:
         type: IRON_SWORD
-        name: '&d&lEU PRACTICE'
-        slot: 12
+        name: '&6&lEU PRACTICE'
+        slot: 13
         amount: 1
         command: '/queue join EU-Practice'
+        server-name: 'EU-Practice'
         lore:
-          - '&cServer Offline'
+          - '%aqua_server_status_eu-practice%'
           - ''
-          - '&d&lInfo'
-          - ' &d&l┃ &fPlayers: &d%bungee_EU-Practice%/%server_max_players%'
-          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ' &e&l● &ePlayers: &6%bungee_EU-Practice%/%server_max_players%'
+          - ' &e&l● &eIn Queue: &6<queue_max_position>'
           - ''
-          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - ' &cConnect via with'
+          - ' &7eu.visionmc.club'
+          - ' &cfor better connection'
           - ''
-          - '&c[Cannot join queue]'
-      UHCMeetup:
-        type: GOLDEN_APPLE
-        name: '&d&lUHCMeetup'
-        slot: 22
-        amount: 1
-        command: '/queue join UHCMeetup'
-        lore:
-          - '&cServer Offline'
-          - ''
-          - '&d&lInfo'
-          - ' &d&l┃ &fPlayers: &d%bungee_Meetup%/30'
-          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
-          - ''
-          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
-          - ''
-          - '&E&LCOMING SOON'
-      SoupPvP:
-        type: MUSHROOM_SOUP
-        name: '&d&lSoupPvP'
-        slot: 14
-        amount: 1
-        command: '/queue join SoupPvP'
-        lore:
-          - '&cServer Offline'
-          - ''
-          - '&d&lInfo'
-          - ' &d&l┃ &fPlayers: &d%bungee_SoupPvP%/200'
-          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
-          - ''
-          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
-          - ''
-          - '&e&lCOMING SOON'
-      PotSG:
-        type: POTION
-        name: '&d&lPotSG'
+          - '&a&lCLICK TO JOIN'
+      modern-practice:
+        type: STONE_SWORD
+        name: '&6&lModern Practice'
         slot: 16
         amount: 1
-        command: '/queue join PotSG'
+        command: '/queue join modern-practice'
+        server-name: 'modern-practice'
         lore:
-          - '%aqua_server_status_potsg%'
+          - '%aqua_server_status_modern-practice%'
           - ''
-          - '&d&lInfo'
-          - ' &d&l┃ &fPlayers: &d%bungee_PotSG%/30'
-          - ' &d&l┃ &fIn Queue: &d<queue_max_position>'
+          - ' &e&l● &ePlayers: &6%bungee_modern-practice%/%server_max_players%'
+          - ' &e&l● &eIn Queue: &6<queue_max_position>'
           - ''
-          - ' &d&l┃ &fVersion: &a1.7x 1.8x'
+          - '&e&lVersions: &71.9.x 1.18.x'
           - ''
-          - '&e[Click to join]'
+          - '&a&lCLICK TO JOIN'
+  minigames-inventory:
+    title: '&8Server Selector » Minigames'
+    rows: 3
+    items:
+      na-sg-1:
+        type: FISHING_ROD
+        name: '&6&lSurvival Games'
+        slot: 11
+        amount: 1
+        command: '/queue join na-sg-1'
+        server-name: 'na-sg-1'
+        lore:
+          - '%aqua_server_status_na-sg-1%'
+          - ''
+          - ' &e&l● &ePlayers: &6%bungee_na-sg-1%/30'
+          - ' &e&l● &eIn Queue: &6<queue_max_position>'
+          - ''
+          - '&a&lCLICK TO JOIN'
+      PotSG:
+        type: POTION
+        name: '&6&lPotSG'
+        slot: 15
+        amount: 1
+        command: '/queue join PotSG'
+        server-name: 'PotSG'
+        lore:
+          - '%aqua_server_status_na-potsg-1%'
+          - ''
+          - ' &e&l● &ePlayers: &6%bungee_PotSG%/30'
+          - ' &e&l● &eIn Queue: &6<queue_max_position>'
+          - ''
+          - '&a&lCLICK TO JOIN'
+
+
+
